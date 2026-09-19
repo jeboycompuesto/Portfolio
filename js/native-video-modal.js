@@ -11,7 +11,10 @@ const nativeVideoByPoster = {
   'product-designers-vs-developers.mp4.png': 'product-designers-vs-developers.mp4',
   'asap-rock.jpg': 'asap-rock.mp4',
   'corgi-cafe.jpg': 'corgi-cafe.mp4',
-  'nba-g-league.jpg': 'nba-g-league-recap.mp4'
+  'nba-g-league.jpg': 'nba-g-league-recap.mp4',
+  'DdFa3d0AT62.jpg': 'building-dolly.mp4',
+  'DdXOEdTvxnV.jpg': 'jeboy-lucas-nyc.mp4',
+  'Ddcaso3v4O0.jpg': 'building-nyc-with-lucas.mp4'
 };
 
 const originalTitles = {
@@ -26,7 +29,10 @@ const originalTitles = {
   'Toronto-tech-week.mp4': 'Toronto Tech Week',
   'asap-rock.mp4': 'ASAP Rocky Recap',
   'corgi-cafe.mp4': 'Corgi Cafe',
-  'nba-g-league-recap.mp4': 'NBA G League Montreal Recap'
+  'nba-g-league-recap.mp4': 'NBA G League Montreal Recap',
+  'building-dolly.mp4': 'Building Dolly',
+  'jeboy-lucas-nyc.mp4': 'Jeboy × Lucas: This Is Just the Beginning',
+  'building-nyc-with-lucas.mp4': 'Building in NYC with Lucas'
 };
 
 const thumbnailByVideo = {
@@ -39,7 +45,10 @@ const thumbnailByVideo = {
   'spiderman.mp4': 'spiderman-no-play.jpg',
   'dolly-hackathon-demo.mp4': 'dolly-hackathon-frame.jpg',
   'Toronto-tech-week.mp4': 'DZ23zLDxdpp.jpg?v=4',
-  'Startup-week.mp4': 'startup-week-no-play.jpg'
+  'Startup-week.mp4': 'startup-week-no-play.jpg',
+  'building-dolly.mp4': 'DdFa3d0AT62.jpg',
+  'jeboy-lucas-nyc.mp4': 'DdXOEdTvxnV.jpg',
+  'building-nyc-with-lucas.mp4': 'Ddcaso3v4O0.jpg'
 };
 
 const sourceUrlByVideo = {
@@ -50,7 +59,10 @@ const sourceUrlByVideo = {
   'dolly-hackathon-demo.mp4': 'https://www.instagram.com/dollysetgo/reel/DbVvhLrMIWG/',
   'Toronto-tech-week.mp4': 'https://www.instagram.com/jeboyofficial/reel/DZ23zLDxdpp/',
   'Startup-week.mp4': 'https://www.instagram.com/jeboyofficial/reel/Da0SbkrOvi7/',
-  'nba-g-league-recap.mp4': 'https://www.instagram.com/corevizuals/p/DW2EJN2Fg_J/'
+  'nba-g-league-recap.mp4': 'https://www.instagram.com/corevizuals/p/DW2EJN2Fg_J/',
+  'building-dolly.mp4': 'https://www.instagram.com/p/DdFa3d0AT62/',
+  'jeboy-lucas-nyc.mp4': 'https://www.instagram.com/p/DdXOEdTvxnV/',
+  'building-nyc-with-lucas.mp4': 'https://www.instagram.com/p/Ddcaso3v4O0/'
 };
 
 const feature = document.querySelector('.netflix-hero');
@@ -73,6 +85,13 @@ if (techRow) {
 if (techRow && founderRow) {
   const inhandCard = techRow.children[2];
   if (inhandCard) founderRow.insertBefore(inhandCard, founderRow.children[2] || null);
+}
+if (techRow) {
+  techRow.insertAdjacentHTML('afterbegin', '<a class="netflix-card" href="https://www.instagram.com/p/Ddcaso3v4O0/"><img src="images/video-thumbs/Ddcaso3v4O0.jpg" alt="Building in NYC with Lucas"><span>Building in NYC with Lucas</span></a>');
+  techRow.insertAdjacentHTML('afterbegin', '<a class="netflix-card" href="https://www.instagram.com/p/DdXOEdTvxnV/"><img src="images/video-thumbs/DdXOEdTvxnV.jpg" alt="Jeboy and Lucas in New York City"><span>Jeboy × Lucas: This Is Just the Beginning</span></a>');
+}
+if (founderRow) {
+  founderRow.insertAdjacentHTML('afterbegin', '<a class="netflix-card" href="https://www.instagram.com/p/DdFa3d0AT62/"><img src="images/video-thumbs/DdFa3d0AT62.jpg" alt="Building Dolly"><span>Building Dolly</span></a>');
 }
 if (lifeRow) {
   lifeRow.insertAdjacentHTML('beforeend', '<a class="netflix-card" href="videos/asap-rock.mp4"><img src="images/video-thumbs/asap-rock.jpg" alt="ASAP Rocky Recap"><span>ASAP Rocky Recap</span></a>');
