@@ -1,0 +1,59 @@
+/* Finance Bro AI case study and award feature. */
+.rho-page { --rho-ink: #192236; --rho-lime: #c4e889; color: var(--rho-ink); }
+.rho-hero { margin: 44px 0 0; }
+.rho-back { display: inline-block; color: var(--text-muted); text-decoration: none; margin-bottom: 42px; font-size: .875rem; }
+.rho-heading-row { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; justify-content: space-between; }
+.rho-kicker { font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; margin: 0; }
+.rho-award { display: inline-flex; align-items: center; gap: 6px; border-radius: 999px; padding: 8px 14px; background: #edf5df; color: #34491d; font-size: .75rem; font-weight: 700; }
+.rho-hero h1 { font-size: clamp(42px, 6vw, 72px); letter-spacing: -.055em; line-height: 1.08; margin: 28px 0 22px; }
+.rho-hero h1 span { display: block; color: #697659; font-size: .72em; margin-top: 10px; }
+.rho-lead { max-width: 700px; color: #596170; font-size: 1.06rem; line-height: 1.8; }
+.rho-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 26px; }
+.rho-button { display: inline-block; padding: 12px 20px; border-radius: 8px; border: 1px solid transparent; background: #c4e889; color: #192236; font-size: .86rem; font-weight: 700; text-decoration: none; transition: background .2s; }
+.rho-button:hover { background: #b5dc73; }
+.rho-button-outline { background: transparent; border-color: #c9cdd0; }
+.rho-button-outline:hover { background: #edf5df; }
+.rho-text-link { color: inherit; font-size: .86rem; font-weight: 600; text-underline-offset: 4px; }
+.rho-page a:focus-visible, .rho-video-feature a:focus-visible { outline: 3px solid #718d3e; outline-offset: 5px; }
+.rho-meta { display: grid; grid-template-columns: 1fr 1fr 2fr; gap: 24px; border-top: 1px solid var(--border); margin: 40px 0 0; padding: 26px 0; }
+.rho-meta dt { text-transform: uppercase; letter-spacing: .1em; font-size: .65rem; color: #596170; margin-bottom: 5px; }
+.rho-meta dd { font-size: .9rem; font-weight: 600; margin: 0; }
+.rho-product { margin: 12px 0 72px; }
+.rho-product img { display: block; width: 100%; height: auto; border: 1px solid var(--border); border-radius: 16px; box-shadow: 0 14px 44px #1922360d; }
+.rho-product figcaption { text-align: center; color: #596170; font-size: .75rem; margin-top: 12px; }
+.rho-story { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; margin-bottom: 72px; }
+.rho-story h2 { font-size: clamp(26px, 3vw, 36px); letter-spacing: -.04em; line-height: 1.2; margin: 18px 0; }
+.rho-story p, .rho-prototype-note p { color: #596170; font-size: .92rem; line-height: 1.8; }
+.rho-steps { list-style: none; margin: 0; padding: 0; }
+.rho-steps li { display: flex; gap: 20px; padding: 22px 0; border-bottom: 1px solid var(--border); }
+.rho-steps li:first-child { padding-top: 0; }
+.rho-steps li > span { color: #697659; font-size: .75rem; font-weight: 700; padding-top: 5px; }
+.rho-steps h3 { margin: 0 0 6px; font-size: 1rem; }
+.rho-steps p { margin: 0; }
+.rho-content { padding: 44px; border-radius: 16px; background: #192236; color: #fff; margin-bottom: 42px; }
+.rho-content > div { display: flex; align-items: center; flex-wrap: wrap; gap: 18px; justify-content: space-between; }
+.rho-content .rho-kicker { color: #c4e889; }
+.rho-content .rho-award { background: #2d3b35; color: #d8f2b0; }
+.rho-content h2 { font-size: clamp(26px, 3.8vw, 43px); letter-spacing: -.035em; line-height: 1.25; margin: 30px 0 20px; }
+.rho-content > p { max-width: 640px; color: #d3d8e2; line-height: 1.8; margin-bottom: 28px; }
+.rho-prototype-note { max-width: 720px; margin-bottom: 60px; }
+.rho-prototype-note h2 { font-size: 1rem; }
+.rho-footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; border-top: 1px solid var(--border); padding-top: 24px; }
+.rho-footer a { color: inherit; font-size: .875rem; text-decoration: none; }
+.rho-video-feature { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 32px; border: 1px solid #3a4134; border-radius: 14px; padding: 24px; margin: 0 0 44px; background: #1b211b; }
+.rho-video-feature .rho-kicker { color: #c4e889; }
+.rho-video-feature h2 { margin: 12px 0; font-size: 2rem; letter-spacing: -.035em; }
+.rho-video-feature p:not(.rho-kicker) { color: #c8d0c5; font-size: .95rem; }
+.rho-video-image { display: block; border-radius: 8px; overflow: hidden; }
+.rho-video-image img { display: block; width: 100%; height: auto; }
+@media (max-width: 780px) {
+  .rho-story, .rho-video-feature { grid-template-columns: 1fr; gap: 28px; }
+  .rho-meta { grid-template-columns: 1fr 1fr; gap: 20px; }
+  .rho-meta > div:last-child { grid-column: 1 / -1; }
+  .rho-hero { margin-top: 24px; }
+  .rho-back { margin-bottom: 28px; }
+  .rho-content { padding: 28px 24px; }
+  .rho-product, .rho-story { margin-bottom: 44px; }
+  .rho-heading-row { align-items: flex-start; }
+  .rho-video-feature { padding: 20px; }
+}

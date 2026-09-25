@@ -146,7 +146,7 @@ function eraseTitle() {
 
 // Start typing on page load
 document.addEventListener("DOMContentLoaded", () => {
-  typeTitle();
+  if (typingEl) typeTitle();
 });
 
 
@@ -168,6 +168,7 @@ const cursor = document.querySelector('.custom-cursor');
 });
 
 
+if (typeof info !== 'undefined' && document.getElementById('caseTech') && document.getElementById('caseTools')) {
 document.getElementById('caseTech').innerHTML = info.tech || '';
 
 const toolsContainer = document.getElementById('caseTools');
@@ -222,4 +223,5 @@ if (info.tools) {
     block.appendChild(grid);
     toolsContainer.appendChild(block);
   });
+}
 }

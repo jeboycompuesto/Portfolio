@@ -210,7 +210,7 @@
           const FEATURED_SLUGS = [
             'loreal-ux-optimization',
             'osheaga-product-design',
-            'loreal-user-testing',
+            'finance-bro-ai',
             'oncall-balance',
             'evenko-integrations',
             'loreal-ecommerce',
@@ -235,6 +235,9 @@
             clone.addEventListener('click', () => {
               const dest = clone.dataset.href || ('case.html?slug=' + clone.dataset.slug);
               window.location.href = dest;
+            });
+            clone.addEventListener('keydown', event => {
+              if (event.key === 'Enter') clone.click();
             });
             grid.appendChild(clone);
           });
