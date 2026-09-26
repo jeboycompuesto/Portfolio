@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Finance Bro AI — Rho Hackathon Best Content Winner · Jeboy Compuesto</title>
-  <meta name="description" content="Finance Bro AI: a financial decision-making prototype built in 24 hours at the NYC Rho Hackathon. Our team's demo video won Best Content.">
+  <meta name="description" content="Finance Bro AI case study: research, UX flow, UI design and a working financial decision prototype built at the NYC Rho Hackathon. Best Content winner.">
   <meta property="og:title" content="Finance Bro AI — Best Content at Rho Hackathon">
   <meta property="og:description" content="Your next move, modeled. A 24-hour product build and an award-winning demo video.">
   <meta property="og:type" content="website">
@@ -40,7 +40,7 @@
         <dl class="rho-meta">
           <div><dt>The build</dt><dd>24 hours</dd></div>
           <div><dt>The outcome</dt><dd>Best Content</dd></div>
-          <div><dt>The work</dt><dd>Product prototype &amp; demo video</dd></div>
+          <div><dt>The process</dt><dd>Research · UX · UI · Prototype · Storytelling</dd></div>
         </dl>
       </section>
 
@@ -49,32 +49,101 @@
         <figcaption>The working prototype, shown with fictional company data.</figcaption>
       </figure>
 
-      <section class="rho-story" aria-labelledby="rho-question-title">
-        <div>
-          <p class="rho-kicker">01 / The product</p>
-          <h2 id="rho-question-title">Turn a business question into a clearer decision.</h2>
-          <p>A bank balance shows what you have today. A hiring or expansion decision depends on what happens next: setup costs, monthly spending, and when new revenue arrives.</p>
-          <p>Finance Bro AI brings those assumptions into a guided flow, so founders can compare scenarios and understand the reasoning behind a recommendation.</p>
+      <nav class="rho-on-page" aria-label="Case study chapters">
+        <span>Explore the case study</span>
+        <a href="#challenge">Challenge</a><a href="#research">Research</a><a href="#define">Define</a><a href="#ux">UX flow</a><a href="#ui">UI</a><a href="#prototype">Prototype</a><a href="#outcome">Outcome</a>
+      </nav>
+
+      <section class="rho-chapter" id="challenge" aria-labelledby="rho-challenge-title">
+        <div class="rho-chapter-marker"><span>01</span><i></i><span>The challenge</span></div>
+        <div class="rho-story">
+          <div>
+            <h2 id="rho-challenge-title">A bank balance can't answer a future-tense question.</h2>
+            <p>A founder can see today's cash and monthly spending. Hiring a team or expanding to a new city asks something harder: when will the new costs hit, when might revenue arrive, and how much cash needs to remain untouched?</p>
+            <p>Our design question was: <strong>How might we help a founder pressure-test one consequential decision and understand the reasoning behind the answer?</strong></p>
+          </div>
+          <div class="rho-insight-card">
+            <span class="rho-card-label">The decision we chose</span>
+            <h3>Can we fund a NYC team?</h3>
+            <p>One fictional seed-stage company. One 12-month forecast. A $150k cash reserve to protect. This gave the team a specific decision to design and build end to end within 24 hours.</p>
+            <span class="rho-card-foot">Fieldnote Labs is sample data, not a real customer.</span>
+          </div>
         </div>
-        <ol class="rho-steps">
-          <li><span>01</span><div><h3>Ask the question</h3><p>Start with a concrete plan: can we fund a NYC team?</p></div></li>
-          <li><span>02</span><div><h3>Make assumptions visible</h3><p>Set costs, revenue timing, and the cash reserve to protect.</p></div></li>
-          <li><span>03</span><div><h3>Explore the trade-offs</h3><p>Adjust the plan and see cash projections and recommendations update.</p></div></li>
+      </section>
+
+      <section class="rho-chapter" id="research" aria-labelledby="rho-research-title">
+        <div class="rho-chapter-marker"><span>02</span><i></i><span>UX research</span></div>
+        <div class="rho-section-head">
+          <div><h2 id="rho-research-title">Find the friction before drawing screens.</h2><p>The team reviewed three public discussion threads, competitor product pages and Plaid documentation. We separated firsthand accounts from vendor claims and kept contradictory evidence in the board.</p></div>
+          <a class="rho-text-link" href="https://www.figma.com/board/MsyLhQcuvfcRN3JkBRdzl5/FinanceBro-AI?node-id=31-188" target="_blank" rel="noopener">Explore the research board ↗</a>
+        </div>
+        <div class="rho-findings">
+          <article><span>01 / Model complexity</span><h3>The spreadsheet keeps growing.</h3><p>One founder described a model spanning employees, costs, seats, pricing and expected revenue. It suggested a need to handle several drivers without making the founder maintain an increasingly complex spreadsheet.</p></article>
+          <article><span>02 / Learning cost</span><h3>Forecasts need translation.</h3><p>A planning-tool user valued safe scenario experiments but found the difference between actual and forecast periods confusing. We treated clear labels and editable assumptions as product requirements to explore.</p></article>
+          <article><span>03 / Contradictory evidence</span><h3>Excel works for some teams.</h3><p>Other founders said a spreadsheet, accounting software and a monthly close were enough. The prototype therefore needed to earn its place by making one decision easier to understand, not by promising to replace every finance workflow.</p></article>
+        </div>
+        <figure class="rho-figure rho-figure-paper"><img src="images/finance-bro-research.png" alt="FigJam research notes showing public founder accounts, competitor comparison and unanswered interview questions" width="1600" height="1532" loading="lazy"><figcaption>The research board records the sources, interpretations and questions the team still needed to validate.</figcaption></figure>
+        <p class="rho-evidence-note"><strong>Research boundary:</strong> This was desk research, not completed customer interviews. The board explicitly lists interviews with founders and finance practitioners as the next step. The findings informed a prototype hypothesis; they do not establish market demand or usability results.</p>
+      </section>
+
+      <section class="rho-chapter" id="define" aria-labelledby="rho-define-title">
+        <div class="rho-chapter-marker"><span>03</span><i></i><span>Define</span></div>
+        <div class="rho-story">
+          <div><h2 id="rho-define-title">From financial data to a decision someone can defend.</h2><p>We framed two provisional users: a founder creating the case for a major spend, and a finance reviewer checking a model before that decision is made. The founder path became the main demo; model review became the second path.</p><p>For the first path, the job was to take a question, surface the relevant financial baseline, ask for the future assumptions that bank records cannot supply, then show how the answer changes in a downside case.</p></div>
+          <div class="rho-insight-card rho-insight-soft"><span class="rho-card-label">Design principles from the synthesis</span><ul><li><strong>Start with intent.</strong> Ask what the founder wants to decide before showing a blank model.</li><li><strong>Separate facts from guesses.</strong> Label recorded actuals, entered assumptions and calculated outputs.</li><li><strong>Make risk inspectable.</strong> Show the downside, reserve threshold, calculation and source lineage.</li><li><strong>Keep a human in control.</strong> Preview model changes and ask for approval.</li></ul></div>
+        </div>
+        <div class="rho-scope-strip"><div><span>Focused first case</span><strong>NYC team spending decision</strong></div><div><span>Secondary path</span><strong>Review an existing model</strong></div><div><span>Deferred from MVP</span><strong>Benchmarks & broad automation</strong></div></div>
+      </section>
+
+      <section class="rho-chapter" id="ux" aria-labelledby="rho-ux-title">
+        <div class="rho-chapter-marker"><span>04</span><i></i><span>UX architecture &amp; wireframes</span></div>
+        <div class="rho-section-head"><div><h2 id="rho-ux-title">One clear route from question to recommendation.</h2><p>The FigJam work moved from six linked feature wireframes to a full low-fi journey. The core path kept the user oriented while asking only for inputs that could change the NYC decision.</p></div><a class="rho-text-link" href="https://www.figma.com/board/MsyLhQcuvfcRN3JkBRdzl5/FinanceBro-AI?node-id=75-468" target="_blank" rel="noopener">Explore the low-fi mockup ↗</a></div>
+        <ol class="rho-flow">
+          <li><span>01</span><strong>Connect &amp; understand</strong><p>Show the sample company's cash, burn, source coverage and goals before asking for a plan.</p></li>
+          <li><span>02</span><strong>Ask &amp; specify</strong><p>Begin with a business question, then collect setup cost, ongoing team costs, receipt timing and reserve floor.</p></li>
+          <li><span>03</span><strong>Compare scenarios</strong><p>Put the baseline, base and downside cases on the same chart; expose the driver that changes the result.</p></li>
+          <li><span>04</span><strong>Explain &amp; decide</strong><p>Pair the recommendation with its conditions, calculation and next action.</p></li>
         </ol>
+        <figure class="rho-figure rho-figure-paper"><img src="images/finance-bro-wireframe.png" alt="Grayscale FigJam scenario wireframe with cash chart, setup-cost slider, reserve line, assumptions and scenario table" width="1440" height="1288" loading="lazy"><figcaption>The low-fi scenario screen made the adjustable setup cost, $150k reserve line and assumptions visible together.</figcaption></figure>
+        <p class="rho-evidence-note"><strong>What we questioned:</strong> The board calls out whether the Home charts feel too much like a dashboard, whether users understand ACTUAL and ASSUMPTION tags, and whether founders would connect real accounts during a demo. These were questions for testing, not findings from a completed usability study.</p>
       </section>
 
-      <section class="rho-content" aria-labelledby="rho-content-title">
-        <div><p class="rho-kicker">02 / The winning content</p><span class="rho-award">🏆 Rho Hackathon · Best Content</span></div>
-        <h2 id="rho-content-title">“Can you afford your next hire,<br>or just their first paycheck?”</h2>
-        <p>We shared our hackathon demo with a question founders face before committing to growth. Our team won Best Content for the video, bringing the product's financial decision-making story to life.</p>
-        <a class="rho-button" href="https://x.com/jeboymotion/status/2099174434418655318" target="_blank" rel="noopener">Watch the winning video on X ↗</a>
+      <section class="rho-chapter" id="ui" aria-labelledby="rho-ui-title">
+        <div class="rho-chapter-marker"><span>05</span><i></i><span>UI &amp; visual system</span></div>
+        <div class="rho-story">
+          <div><h2 id="rho-ui-title">Give the numbers room to speak.</h2><p>The early direction put a large lime surface, heavy headline, pill controls and ten equally prominent decision tiles on the first screen. The team refined the hierarchy: lead with company context and four financial metrics, put the question in one clear entry point, and move the broader decision areas into a disclosure.</p><p>The existing Figma system supplied the FinanceBro mark, lime and navy palette, type styles and reusable illustrations. The interface uses lime for the primary action and quieter neutral surfaces for calculations, warnings and recommendations.</p></div>
+          <div class="rho-insight-card"><span class="rho-card-label">Visual rules</span><ul><li>Figtree carries interface text; Bricolage Grotesque stays in the wordmark.</li><li>Source and assumption tags explain where each number comes from.</li><li>Charts label the reserve threshold and risk in words, not color alone.</li><li>Brody welcomes and guides; the financial answer stays free of decoration.</li></ul></div>
+        </div>
+        <figure class="rho-figure rho-figure-paper"><img src="images/finance-bro-design-system.png" alt="Figma design-system color chapter showing lime, navy, blue, orange and tested text contrast combinations" width="1240" height="1478" loading="lazy"><figcaption>The color chapter documents the palette, text contrast and how risk labels remain understandable without relying on color.</figcaption></figure>
+        <a class="rho-text-link" href="https://www.figma.com/design/NgrotxV7Njc0D60IIEgRJo" target="_blank" rel="noopener">Open the Figma design system ↗</a>
       </section>
 
-      <aside class="rho-prototype-note" aria-label="About the prototype">
-        <h2>Inside the prototype</h2>
-        <p>The demo uses simulated connections and fictional data. A deterministic calculation engine updates the projections as assumptions change. The modeled decision is funding a NYC team.</p>
-        <a class="rho-text-link" href="https://github.com/jeboycompuesto/finance-bro-ai" target="_blank" rel="noopener">Explore the source and demo details ↗</a>
-      </aside>
+      <section class="rho-chapter" id="prototype" aria-labelledby="rho-prototype-title">
+        <div class="rho-chapter-marker"><span>06</span><i></i><span>Interactive prototype</span></div>
+        <div class="rho-section-head"><div><h2 id="rho-prototype-title">The answer changes when the assumptions change.</h2><p>The clickable prototype carries the same NYC decision through guided questions, scenarios and a recommendation. It also demonstrates a separate model-review flow.</p></div><a class="rho-text-link" href="https://jeboycompuesto.github.io/finance-bro-ai/" target="_blank" rel="noopener">Try the live demo ↗</a></div>
+        <div class="rho-showcase">
+          <article><div><span>01 / Guided inputs</span><h3>Ask about what the data cannot know.</h3><p>Cash and burn are shown as actuals. The founder supplies future costs, receipt timing and the reserve they want to protect. Ranges and required-field checks handle uncertainty without silently inventing values.</p></div><figure><img src="images/finance-bro-questions.png" alt="Prototype guided-questions screen separating company actuals from editable future assumptions" width="1280" height="1330" loading="lazy"><figcaption>Actuals and assumptions remain visibly distinct.</figcaption></figure></article>
+          <article><div><span>02 / Scenario comparison</span><h3>Make the trade-off tangible.</h3><p>At $60k in setup costs, the modeled downside falls to $125k by Month 6, below the $150k reserve. Reducing setup to $35k holds the reserve through Month 6. The slider, chart and scenario table update from the same calculation engine.</p></div><figure><img src="images/finance-bro-scenarios.png" alt="Prototype scenarios screen showing a live setup-cost driver, cash projections and reserve-risk comparison" width="1280" height="1403" loading="lazy"><figcaption>Changing one driver updates the result across the screen.</figcaption></figure></article>
+          <article><div><span>03 / Explainable recommendation</span><h3>Show what happened, why and what to do next.</h3><p>The recommendation caps NYC setup at $35k and suggests starting fundraising conversations by Month 3. It states the conditions behind that advice, the remaining runway risk and a path back to the calculation.</p></div><figure><img src="images/finance-bro-recommendation.png" alt="Prototype recommendation screen with condition, financial impact table and linked calculation" width="1280" height="1327" loading="lazy"><figcaption>The result includes its reasoning and the scenario behind it.</figcaption></figure></article>
+          <article><div><span>04 / Model review</span><h3>Preview a correction before accepting it.</h3><p>In the sample workbook, a formula omits $15k of monthly NYC costs. The review points to the affected cells and previews Month-6 cash falling from $240k to $150k. The original stays intact while the user approves or rejects the proposed change.</p></div><figure><img src="images/finance-bro-review.png" alt="Prototype review screen showing a formula finding, its cell location and an impact preview before approval" width="1280" height="1058" loading="lazy"><figcaption>A finding shows location, reason, impact and explicit approval.</figcaption></figure></article>
+        </div>
+        <p class="rho-evidence-note"><strong>Prototype scope:</strong> The product uses fictional company data, simulated connections and a deterministic browser calculation engine. It has no live bank integration, backend or AI API calls. The NYC team decision is the fully modeled example.</p>
+      </section>
+
+      <section class="rho-chapter" id="outcome" aria-labelledby="rho-outcome-title">
+        <div class="rho-chapter-marker"><span>07</span><i></i><span>Storytelling &amp; outcome</span></div>
+        <section class="rho-content" aria-labelledby="rho-content-title">
+          <div><p class="rho-kicker">The winning content</p><span class="rho-award">🏆 Rho Hackathon · Best Content</span></div>
+          <h2 id="rho-content-title">“Can you afford your next hire,<br>or just their first paycheck?”</h2>
+          <p>Our team framed the demo around a founder's real question, then showed how a change in assumptions affects cash and runway. The video won Best Content at the hackathon.</p>
+          <a class="rho-button" href="https://x.com/jeboymotion/status/2099174434418655318" target="_blank" rel="noopener">Watch the winning video on X ↗</a>
+        </section>
+        <div class="rho-story">
+          <div><h2 id="rho-outcome-title">What the sprint produced.</h2><p>In 24 hours, the team moved from a documented research question and low-fi journey to a clickable product demo and an award-winning video. The working example lets someone adjust a cost, watch a reserve threshold change, and inspect the calculation behind the recommendation.</p></div>
+          <div class="rho-insight-card rho-insight-soft"><span class="rho-card-label">What to validate next</span><ul><li>Observe founders working through a recent hiring or expansion decision.</li><li>Test whether people can identify the key assumption and change it without restarting.</li><li>Ask finance reviewers whether the source and impact preview provide enough evidence to approve a correction.</li><li>Compare the workflow against the spreadsheets and tools those teams already use.</li></ul></div>
+        </div>
+        <div class="rho-end-links"><a class="rho-button" href="https://jeboycompuesto.github.io/finance-bro-ai/" target="_blank" rel="noopener">Try the prototype ↗</a><a class="rho-button rho-button-outline" href="https://github.com/jeboycompuesto/finance-bro-ai" target="_blank" rel="noopener">View the code ↗</a><a class="rho-text-link" href="https://www.figma.com/board/MsyLhQcuvfcRN3JkBRdzl5/FinanceBro-AI" target="_blank" rel="noopener">See the process board ↗</a></div>
+      </section>
     </main>
     <footer class="rho-footer"><a href="projects.html">← More projects</a><a href="video-work.html">More video work →</a></footer>
   </div>
